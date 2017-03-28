@@ -34,10 +34,35 @@ function crearPokemon(){
                             );
   pokemons.push(pokemon);
   console.log(pokemons);
-  mostrarPokemons()
+  añadirPokemon1();
+  añadirPokemon2();
+  //mostrarPokemons()//
 }
 
-function mostrarPokemons(){
+function añadirPokemon1(){
+  var pokemon1 = document.getElementById('pokemon1');
+  pokemon1.innerHTML = "";
+
+  pokemons.forEach(function(pokemon){
+    var elemento = document.createElement("option");
+    elemento.innerHTML = pokemon.nombre;
+    pokemon1.appendChild(elemento);
+  });
+}
+
+function añadirPokemon2(){
+  var pokemon2 = document.getElementById('pokemon2');
+  pokemon2.innerHTML = "";
+  
+  pokemons.forEach(function(pokemon){
+    var elemento = document.createElement("option");
+    elemento.innerHTML = pokemon.nombre;
+    pokemon2.appendChild(elemento);
+  });
+}
+
+
+/*function mostrarPokemons(){
   var listaPokemons = document.getElementById('listaPokemons');
 
   var lista = document.createElement ("ul");
@@ -50,7 +75,7 @@ function mostrarPokemons(){
 
     listaPokemons.appendChild(lista);
   })
-}
+}*/
 
 
 /*var pikachu = new Pokemon ("Pikachu", "amarillo",70);
