@@ -36,6 +36,7 @@ function crearPokemon(){
   console.log(pokemons);
   añadirPokemon1();
   añadirPokemon2();
+  borrar();
   //mostrarPokemons()//
 }
 
@@ -53,7 +54,7 @@ function añadirPokemon1(){
 function añadirPokemon2(){
   var pokemon2 = document.getElementById('pokemon2');
   pokemon2.innerHTML = "";
-  
+
   pokemons.forEach(function(pokemon){
     var elemento = document.createElement("option");
     elemento.innerHTML = pokemon.nombre;
@@ -61,6 +62,16 @@ function añadirPokemon2(){
   });
 }
 
+function borrar() {
+  var stringVacio = "";
+  document.getElementById('nombrePokemon').value = stringVacio;
+  document.getElementById('colorPokemon').value = stringVacio;
+  document.getElementById('puntosAtaque').value = stringVacio;
+}
+
+function pelear(){
+
+}
 
 /*function mostrarPokemons(){
   var listaPokemons = document.getElementById('listaPokemons');
