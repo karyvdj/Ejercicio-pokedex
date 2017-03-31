@@ -21,6 +21,9 @@ function Pokemon(nombre,color,puntosAtaque){
     }
   };
 }
+/*var pikachu = new Pokemon ("Pikachu", "amarillo",70);
+var charmander = new Pokemon ("Charmander", "rojo",90);*/
+
 var pokemons = [];
 
 function crearPokemon(){
@@ -40,6 +43,7 @@ function crearPokemon(){
   //mostrarPokemons()//
 }
 
+//POKEMON AÑADIR//
 function añadirPokemon1(){
   var pokemon1 = document.getElementById('pokemon1');
   pokemon1.innerHTML = "";
@@ -50,7 +54,6 @@ function añadirPokemon1(){
     pokemon1.appendChild(elemento);
   });
 }
-
 function añadirPokemon2(){
   var pokemon2 = document.getElementById('pokemon2');
   pokemon2.innerHTML = "";
@@ -60,6 +63,35 @@ function añadirPokemon2(){
     elemento.innerHTML = pokemon.nombre;
     pokemon2.appendChild(elemento);
   });
+}
+
+// POKEMONES SELECCIONADOS //
+function contrincante1(){
+    var posicionPokemon1 = document.getElementById("pokemon1").selectedIndex;
+    console.log(posicionPokemon1);
+    var oponente1 = pokemones[posicionPokemon1];
+    return oponente1;
+}
+function contrincante2(){
+    var posicionPokemon2 = document.getElementById("pokemon2").selectedIndex;
+    console.log(posicionPokemon2);
+    var oponente2 = pokemones[posicionPokemon2];
+    return oponente2;
+}
+
+// ATAQUE DE POKEMONES //
+function atacar() {
+    var pok1 = contrincante1();
+    var pok2 = contrincante2();
+
+    if(pok1.nombre == pok2.nombre){
+        alert(pok1.nombre + " OPPS!, elije otro pokemon")
+    } else {
+        pok1.pelear(pok2);
+
+        var resultado = document.getElementById("resultadoAtaque");
+        resultado.innerHTML = pok2.nombre + " tiene vida de: " + pok2.vida;
+    }
 }
 
 function borrar() {
@@ -87,19 +119,3 @@ function pelear(){
     listaPokemons.appendChild(lista);
   })
 }*/
-
-
-/*var pikachu = new Pokemon ("Pikachu", "amarillo",70);
-var charmander = new Pokemon ("Charmander", "rojo",90);
-console.log(pikachu);
-console.log(charmander);
-
-console.log(pikachu.saludar());
-console.log(charmander.saludar());
-
-console.log(pikachu.nivelDeAmistad);
-console.log(charmander.nivelDeAmistad);
-
-pikachu.pelear(charmander)
-
-console.log(charmander.vida)*/
