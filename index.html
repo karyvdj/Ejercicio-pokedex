@@ -3,23 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+      body{
+        background:#56CFE1;
+        text-align: center;
+      }
+      img{
+        width: 40%;
+        margin: 80px;
+      }
+      input{
+        margin: 10px;
+      }
+      div{
+        margin: 30px;
+      }
+      p{
+        font-style: Helvetica;
+        font-size: 40px;
+        color: #006777;
+      }
+    </style>
   </head>
   <body>
-    <h1> ☺ B A T A L L A <br> P O K E M O N ☺ <h1>
-    <input type="text" id="nombrePokemon" placeholder="Nombre Pokemon" >
-    <input type="text" id="colorPokemon" placeholder="Color Pokemon">
-    <input type="text" id="puntosAtaque" placeholder="Puntos de ataque">
-    <button type="button" id=" " onclick="crearPokemon()">CREAR POKEMON</button>
+    <header><img src="img/pokemon.png"></header>
+    <section>
+      <input type="text" id="nombrePokemon" placeholder="Nombre Pokemon" >
+      <input type="text" id="colorPokemon" placeholder="Color Pokemon">
+      <input type="text" id="puntosAtaque" placeholder="Puntos de ataque">
+      <button type="button" id=" " onclick="crearPokemon()">CREAR POKEMON</button>
+    </section>
     <div>
       <select id="pokemon1">
       </select>
-      <button type="button" id=" " onclick="pelear()">¡A PELEAR!</button>
+      <button type="button" id=" " onclick="atacar()">¡A PELEAR!</button>
       <select id="pokemon2">
       </select>
-      <p id="resultadoAtaque">
-      </p>
+      <p id="resultadoAtaque"></p>
     </div>
-
+    <img src="img/starter-pokemon.png">
     <script src="pokedex.js"></script>
   </body>
 </html>

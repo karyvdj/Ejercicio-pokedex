@@ -69,13 +69,13 @@ function añadirPokemon2(){
 function contrincante1(){
     var posicionPokemon1 = document.getElementById("pokemon1").selectedIndex;
     console.log(posicionPokemon1);
-    var oponente1 = pokemones[posicionPokemon1];
+    var oponente1 = pokemons[posicionPokemon1];
     return oponente1;
 }
 function contrincante2(){
     var posicionPokemon2 = document.getElementById("pokemon2").selectedIndex;
     console.log(posicionPokemon2);
-    var oponente2 = pokemones[posicionPokemon2];
+    var oponente2 = pokemons[posicionPokemon2];
     return oponente2;
 }
 
@@ -85,7 +85,7 @@ function atacar() {
     var pok2 = contrincante2();
 
     if(pok1.nombre == pok2.nombre){
-        alert(pok1.nombre + " OPPS!, elije otro pokemon")
+        alert(" OPPS! " + pok1.nombre + " no puede pelear contra si mismo")
     } else {
         pok1.pelear(pok2);
 
